@@ -470,7 +470,7 @@ The initial setting has been changed to open to perform the closure." %name)
 
         return ta, tf, list(amp)
 
-    def plot_node_head(self, name, ax=None):
+    def plot_node_head(self, name, ax=None,title):
         """Detect pressure change in simulation results
 
         Parameters
@@ -497,7 +497,8 @@ The initial setting has been changed to open to perform the closure." %name)
         # plt.title('Pressure Head at Node(s) ')
         plt.xlabel("Time [s]", fontsize=14)
         plt.ylabel("Pressure Head [m]", fontsize=14)
-        plt.legend(loc='best', framealpha=.5, numpoints=1)
+        plt.title(title)
+        plt.legend(loc='lower right', framealpha=.5, numpoints=1)
         plt.grid(False)
         plt.show()
 
